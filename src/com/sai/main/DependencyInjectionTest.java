@@ -17,6 +17,9 @@ public class DependencyInjectionTest
 		// invoke the business method
 		String message=generator.showWishMessage("sai");
 		System.out.println("result :"+message);
+		
+			String date=generator.showWishMessageWithDate("Sai");
+			System.out.println("result :"+date);
 		// close the IOC Container
 		ctx.close();
 	}

@@ -1,13 +1,18 @@
 package com.sai.bean;
+import java.time.LocalDate;
 import java.time.LocalTime;
 public class WishMessageGenerator 
 {
-	public LocalTime lTime;
+	private LocalTime lTime;
+	private LocalDate lDate;
 
 	public void setlTime(LocalTime lTime) 
 	{
 		System.out.println("WishMessageGenerator.setlTime()");
 		this.lTime = lTime;
+	}
+	public void setlDate(LocalDate lDate) {
+		this.lDate = lDate;
 	}
 	
 	public String showWishMessage(String user)
@@ -23,6 +28,12 @@ public class WishMessageGenerator
 		else
 			return"Good night"+user;
 	}
+	public String showWishMessageWithDate(String user)
+	{
+		System.out.println("WishMessageGenerator.showWishMessageWithDate()");
+		return user+" current  year is :"+lDate.getYear();
+	}
+	
 
 	
 	

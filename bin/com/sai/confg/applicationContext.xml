@@ -7,12 +7,14 @@
            
            <!-- configuring normal java class as spring bean -->
            <bean id="ltime" class="java.time.LocalTime" factory-method="now"></bean>
+           <bean id="ldate" class="java.time.LocalDate" factory-method="now"></bean>
            <!--Dependent Spring bean class object  -->
            <!--                                         -->
            <!-- target spring bean  -->
            <bean id="wmg" class="com.sai.bean.WishMessageGenerator">
            	<!-- setter injection configuration to inject ltime(bean id )dependent spring bean class object  to wmg target class Spring bean class object-->
            	<property name="lTime" ref="ltime"/>
+           	<property name="lDate" ref="ldate"></property>
            	<!-- lTime is Has A property of target spring bean -->
            	<!-- ltime is the dependent spring bean class object of bean id -->
      
